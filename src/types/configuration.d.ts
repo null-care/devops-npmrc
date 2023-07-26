@@ -5,3 +5,8 @@ declare interface Configuration {
   feed: string;
   pat: string;
 }
+
+declare interface ProjectConfiguration {
+  organization: string;
+  feed: string;
+}
