@@ -1,12 +1,16 @@
 {
   "name": "devops-npmrc",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A CLI tool for adding Azure devops registry to .npmrc",
   "main": "dist/index.js",
   "bin": {
     "devops-npmrc": "bin/index.js"
   },
   "author": "Herman Brunberg",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/null-care/devops-npmrc.git"
+  },
   "license": "MIT",
   "type": "module",
   "files": [
@@ -27,7 +31,6 @@
     "start": "yarn build && node dist/index.js",
     "build": "tsc && yarn copy-files",
     "copy-files": "copyfiles -u 1 src/**/*.txt src/**/*.yml dist/",
-    "bundleOLD": "yarn build && esbuild dist/index.js  --bundle --outfile=bin/index.js --platform=node --target=node16",
     "bundle": "ncc build src/index.ts -o bin/",
     "run-bin": "node bin/index.js"
   },

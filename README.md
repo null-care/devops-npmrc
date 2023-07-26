@@ -1,4 +1,7 @@
-# devops-npmrc
+# DevOps `.npmrc` CLI
+
+[![npm version](https://img.shields.io/npm/v/devops-npmrc.svg?style=flat)](https://www.npmjs.com/package/devops-npmrc/)
+[![npm version](https://img.shields.io/npm/dm/devops-npmrc.svg)](https://nodei.co/npm/devops-npmrc/)
 
 CLI tool for adding Azure DevOps artifact feed to .npmrc on unix based systems like macOS or Linux.
 
@@ -67,8 +70,44 @@ npx devops-npmrc@latest -p
 
 ### Available options
 
-- `-p` `--project` – _Generate a `.npmrc` file for a project instead of a global file_
+- `-p`, `--project` – _Generate a `.npmrc` file for a project instead of a global file_
+- `-V`, `--version` – _output the version number_
+- `-h`, `--help` – _display help_
 
-## Yarn
+### Yarn
 
 If you are using `yarn` you can select `yarn` when asked what package manager you are using, this will generate both a `.npmrc` file and a `.yarnrc.yml` file.
+
+---
+
+<br/>
+
+## Contribute
+
+If you wish to contribute, here are some steps to get started:
+
+1. [Fork the repo](https://github.com/null-care/devops-npmrc/fork) and clone it to your local machine.
+2. Install dependencies by running `yarn`
+3. Make your changes
+4. [Build and bundle the project](#build-and-bundle-the-project)
+5. Push to github and [submit a pull request](https://github.com/null-care/devops-npmrc/compare)
+
+### Build and bundle the project
+
+Build the project
+
+```bash
+yarn build
+```
+
+Bundle the project
+
+```bash
+yarn bundle
+```
+
+Run the executable _(located in the bin directory)_
+
+```bash
+yarn run-bin
+```

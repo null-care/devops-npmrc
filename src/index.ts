@@ -8,7 +8,7 @@ async function main() {
   program
     .name('devops-npmrc')
     .description('CLI tool to add a devops registry to your .npmrc file')
-    .version('1.0.3');
+    .version('1.0.4');
 
   program.option('-p, --project', 'Generate a .npmrc file for a project');
 
