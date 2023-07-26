@@ -1,6 +1,6 @@
 {
   "name": "devops-npmrc",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "A CLI tool for adding Azure devops registry to .npmrc",
   "main": "dist/index.js",
   "bin": {

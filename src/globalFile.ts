@@ -59,7 +59,7 @@ export async function configureGlobalFile() {
     console.log(
       `${chalk.white.italic(
         'To be able to install packages from DevOps artifact feed in a project, you need to add a .npmrc file to the root of the project.\nYou can add a .npmrc file to your project by running: '
-      )}${chalk.blue('npx devops-npmrc -p')}\n`
+      )}${chalk.blue('npx devops-npmrc@latest -p')}\n`
     );
 
     console.log(
