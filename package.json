@@ -1,21 +1,33 @@
 {
   "name": "devops-npmrc",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A CLI tool for adding Azure devops registry to .npmrc",
   "main": "dist/index.js",
-  "bin": "dist/index.js",
+  "bin": "bin/index.js",
   "author": "Herman Brunberg",
   "license": "MIT",
   "type": "module",
   "files": [
     "dist",
-    "src"
+    "bin"
+  ],
+  "keywords": [
+    "npmrc",
+    "yarnrc",
+    "devops",
+    "azure",
+    "registry",
+    "CLI",
+    "artifacts"
   ],
   "typings": "dist/index.d.ts",
   "scripts": {
     "start": "yarn build && node dist/index.js",
     "build": "tsc && yarn copy-files",
-    "copy-files": "copyfiles -u 1 src/**/*.txt src/**/*.yml dist/"
+    "copy-files": "copyfiles -u 1 src/**/*.txt src/**/*.yml dist/",
+    "bundleOLD": "yarn build && esbuild dist/index.js  --bundle --outfile=bin/index.js --platform=node --target=node16",
+    "bundle": "ncc build src/index.ts -o bin/",
+    "run-bin": "node bin/index.js"
   },
   "dependencies": {
     "@inquirer/prompts": "^3.0.0",
@@ -26,6 +38,7 @@
   },
   "devDependencies": {
     "copyfiles": "^2.4.1",
+    "esbuild": "^0.18.17",
     "rimraf": "^5.0.1",
     "typescript": "^5.1.6"
   }
