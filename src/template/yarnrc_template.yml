@@ -1,0 +1,8 @@
+npmRegistries:
+  //pkgs.dev.azure.com/<ORGANIZATION_NAME>/_packaging/<FEED_NAME>/npm/registry:
+    npmAlwaysAuth: true
+    npmAuthIdent: <ORG_PAT_64>
+
+npmScopes:
+  <FEED_NAME>:
+    npmRegistryServer: 'https://pkgs.dev.azure.com/<ORGANIZATION_NAME>/_packaging/<FEED_NAME>/npm/registry/'
