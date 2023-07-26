@@ -1,9 +1,11 @@
 {
   "name": "devops-npmrc",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A CLI tool for adding Azure devops registry to .npmrc",
   "main": "dist/index.js",
-  "bin": "bin/index.js",
+  "bin": {
+    "devops-npmrc": "bin/index.js"
+  },
   "author": "Herman Brunberg",
   "license": "MIT",
   "type": "module",
